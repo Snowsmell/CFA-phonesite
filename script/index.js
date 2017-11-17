@@ -145,13 +145,13 @@ $(function () {
         lis = hotnews.querySelectorAll('li');        
     //获取li的高度,定时上移ul的margintop
     liH = lis[0].offsetHeight
-    console.log(lis[0].offsetHeight)
+    // console.log(lis[0].offsetHeight)
     //手动设置ul的高度
     var ulH=0;
     [].forEach.call(lis,function(v,i){
       ulH+=liH
     })
-    console.log(ulH)
+    // console.log(ulH)
 
     for(var i=0;i<2;i++){
       var li = lis[i].cloneNode(true)
@@ -159,7 +159,7 @@ $(function () {
   }
     var targetH =ulH
         distance = 0,
-        pace = 1;
+        pace = .5;
     setInterval(function () {
       hotnews.style.marginTop = -(distance) + 'px'
       distance += pace
@@ -167,7 +167,7 @@ $(function () {
         hotnews.style.marginTop = 0;
         distance = 0
       }
-    }, 150)
+    }, 50)
   }
   carouselMobile()
   hotnews()
