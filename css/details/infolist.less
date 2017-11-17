@@ -1,0 +1,219 @@
+@import "../public/base.less"; 
+html,body{
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+}
+header{
+  display: flex;
+  padding: 15px 20px 0;
+  position: relative;
+  box-shadow: 0 5px 5px #ddd;
+  >a.back{
+    float: left;
+    font-size: 24px;
+    font-family: '宋体';
+    margin-top: -3px;
+    text-shadow: .1px .1px #000;
+  }
+  ul{
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    li{
+      width: 25%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      span{
+        padding-bottom: 15px;
+        border-bottom: 1px solid transparent;
+        transition: all .5s;
+        text-shadow: .1px .1px #333;
+      }      
+    }
+    li.current{
+      span{
+        border-bottom:1px solid #2525e9
+      }
+    }
+  }
+  a.search{
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%)
+  }
+}
+
+.carousel.banner {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 143px;
+  overflow: hidden;
+  >ul {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      >li {
+          list-style: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translateX(100%);
+          a {
+              display: block;
+              img {
+                  max-width: 100%;
+                  min-height: 160px;
+              }
+          }
+          p{
+            padding: 10px 20px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            color:#fff;
+            background-color: rgba(0,0,0,.4)
+          }
+      }
+  }
+  >ol {
+      width: 100%;
+      height: 8px;
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      text-align: right;
+      padding-right: 4%;
+      font-size: 0;
+      >li {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          margin-right: 10px;
+          vertical-align: middle;
+      }
+      >li.active {
+          background-color: #fff;
+          width: 11px;
+          height: 11px;          
+      }
+  }
+}
+
+main{
+  padding: 25px 20px;
+  >ul{
+    li{
+      display: flex;
+      flex: 1;
+      margin-bottom: 25px;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #ddd;
+      .imgbox{        
+        flex:.35;
+        height: 140px;
+        img{
+          height: 140px;
+          max-width: 100%          
+        }
+      }
+      .content{
+        order: -1;
+        position: relative;
+        flex:.63;
+        min-height: 140px;        
+        h3{
+          color:#333;
+          font-size: 22px;
+          font-weight: 400;
+          .spill(4);
+        }
+        .score{
+          position: absolute;
+          bottom: 0;
+          img,span{
+            vertical-align: middle;
+            height: 18px;
+            line-height: 18px;
+          }
+          img{
+            margin-top: -2px;
+            width: 50%;
+            max-width: 140px;
+          }
+          span{
+            display: inline-block;
+            color:#888;
+            &:nth-of-type(2){
+              padding-left: 15px;
+              margin-left: 15px;
+              border-left: 1px solid #888
+            }
+          }
+        }
+        >a{
+          position: absolute;
+          top:0;
+          left:0;
+          width: 100%;
+          height: 100%;
+          z-index: 999;
+        }
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media(max-width:480px) {
+  main{
+    padding: 25px 5px;
+    >ul{
+      li{
+        .content{
+          h3{
+            font-size: 20px
+          }
+          .score{
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width:375px) {
+  main{
+    >ul{
+      li{
+        .content{
+          h3{
+            font-size: 18px;
+            text-shadow: .1px .1px #000; 
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:360px) {
+  header{
+    ul{
+      li{
+        font-size: 12px;
+      }
+    }
+  }
+}

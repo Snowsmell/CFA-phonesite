@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>学员分享</title>
+
+  <link rel="stylesheet" href="../../css/font/iconfont.css">
+  <link rel="stylesheet" href="../../css/details/teacherdetails.css">
+  <script src="../../script/jquery-1.11.2.min.js"></script>
+  <script src="../../script/details/details.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="javascript:history.go(-1);" class="back">
+      <</a>
+        <span>
+          <i class="iconfont icon-share"></i>
+        </span>
+        <h1>Alex Tang</h1>
+  </header>
+  <main>
+    <div class="videobox">
+      <img src="../../images/teachervideo.jpg">
+      <div class="playbtn">
+        <img src="../../images/playvideo.png">
+      </div>
+    </div>
+    <article>
+      <h2>
+        Alex Tang
+        <span>金程教育首席培训师</span>
+      </h2>
+      <div>
+        <p>
+          <span>授课领域：</span> CFA、FRM、CPA、CMA、RFP、金程考研 </p>
+        <p>
+          <span>累计课时：</span> 10000课时</p>
+      </div>
+      <section>
+        金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场学会金融服务工作委员会理事长、PRMIA上海督导委员会委员。
+      </section>
+    </article>
+    <ul>
+      <p>在授课程</p>
+      <li>
+        <div class="imgbox">
+          <img src="../../images/lesson3.png">
+        </div>
+        <div class="content">
+          <h3>CFA一级长线无忧班</h3>
+          <p>以通关为目的，结合前导课程+基础课程+强化课程+冲刺课程+百题课程，CFA考试...</p>
+          <div class="score">
+            <span>4.7分</span>
+            <img src="../../images/score.png">
+            <span>5648人在学</span>
+          </div>
+          <a href="javascript:;"></a>
+        </div>
+      </li>
+      <li>
+        <div class="imgbox">
+          <img src="../../images/lesson4.png">
+        </div>
+        <div class="content">
+          <h3>CFA&FRM双证</h3>
+          <p>金程教育凭借17年CFA培训经验，基于经典“3+2”教学模式，CFA和FRM考试难度...</p>
+          <div class="score">
+            <span>4.7分</span>
+            <img src="../../images/score.png">
+            <span>5648人在学</span>
+          </div>
+          <a href="javascript:;"></a>
+        </div>
+      </li>
+      <li>
+        <div class="imgbox">
+          <img src="../../images/lesson5.png">
+        </div>
+        <div class="content">
+          <h3>CFA一+二+三级特惠无忧取证班</h3>
+          <p>以通关为目的，结合前导课程+基础课程+强化课程+冲刺课程，针对CFA考试特点</p>
+          <div class="score">
+            <span>4.7分</span>
+            <img src="../../images/score.png">
+            <span>5648人在学</span>
+          </div>
+          <a href="javascript:;"></a>
+        </div>
+      </li>
+    </ul>
+
+  </main>
+  <div class="footer">
+    <a href="javascript:;">
+      <i class="iconfont icon-query"></i>
+      <p>在线咨询</p>
+    </a>
+    <a href="../../html/index.html">
+      <i class="iconfont icon-backtop"></i>
+      <p>回到首页</p>
+    </a>
+    <a href="javascript:;">
+      <i class="iconfont icon-phone"></i>
+      <p>400-700-9596</p>
+    </a>
+  </div>
+  <!-- 分享弹窗 -->
+  <div class="sharemodal">
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_32x32 share">
+      <a class="jiathis_button_cqq"></a>
+      <a class="jiathis_button_weixin"></a>
+      <a class="jiathis_button_tsina"></a>
+    </div>
+    <script type="text/javascript">
+      var _title = document.querySelector("h2").innerText
+      // var _summary = document.querySelector("article section").innerText
+      var jiathis_config = {
+        url: window.location.href,
+        summary: "某摘要",
+        title: _title,
+        pic: "某地址",
+        shortUrl: false,
+        hideMore: false
+      }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <div class="cancel">
+      取消
+    </div>
+  </div>
+</body>
+
+</html>

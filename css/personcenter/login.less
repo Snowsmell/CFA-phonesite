@@ -1,0 +1,139 @@
+@import "../public/base.less";
+ 
+html,body{
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+}
+header{
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0 2px 5px #ddd;
+  padding: 0 20px;
+  .back{
+    float: left;
+    font-size: 24px;
+    justify-self: flex-start;
+    font-family: '宋体';
+  }
+  h2{
+    text-align: center;
+    font-size: 22px;
+    color:#333;
+    font-weight: 400;
+  }
+}
+main{
+  padding: 40px 25px;
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    span{
+      font-size: 18px;
+      padding: 15px;      
+    }
+    span.current{
+      font-size: 24px;
+      color:#4665ff
+    }
+  }
+  .form{
+    padding: 10px 0;
+    .login,.register{
+      >label{
+        width: 100%;
+        position: relative;        
+        input{
+          padding-left: 20px;
+          outline: none;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          margin-bottom: 20px ;
+          border: 1px solid #ddd;
+        }
+        i.iconfont{
+          position: absolute;
+          color:#666;
+          font-size: 12px;
+          right:10px;
+          top:50%;
+          transform: translateY(-50%)
+        }
+        i.icon-psd-see{
+          font-size: 16px;
+          top: 40%;
+          display: none;
+        }
+      }
+      label.testpic{
+        display: flex;
+        flex: 1;
+        input{
+          flex: 1;
+        }
+        div{
+          flex: 0 0 60px;
+          height: 40px;
+          margin-left: 20px;
+          img{
+            height: 40px;
+          }
+        }
+      }
+      button{
+        display: block;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        border: none;
+        font-size: 22px;
+        font-weight: 100;
+        background-color: #5163ff
+      }
+      p{
+        margin: 20px 0;
+        overflow: hidden;
+        label{
+          float: left;
+          vertical-align: bottom;
+          color:#666;
+          input[type='checkbox']{
+            outline: none;
+          }
+        }
+        a{
+          float: right;
+          color:#333;
+        }
+      }
+      .others{
+        margin-top: 80px;
+        border-top: 1px solid #ddd;
+        position: relative;
+        >span{
+          position: absolute;;
+          left:50%;
+          transform: translateX(-50%);
+          padding: 15px;
+          background-color: #fff;
+          top: -25px;
+        }
+        >div{
+          display: flex;
+          justify-content: space-around;
+          padding-top: 60px;
+          a,img{
+            width: 30px;
+            height: 30px;
+            
+          }
+        }
+      }
+    }
+    .register{
+      display: none;
+    }
+  }
+}

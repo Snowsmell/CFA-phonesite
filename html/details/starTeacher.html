@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>明星师资</title>
+
+  <link rel="stylesheet" href="../../css/font/iconfont.css">
+  <link rel="stylesheet" href="../../css/details/starTeacher.css">
+  <script src="../../script/jquery-1.11.2.min.js"></script>
+  <script src="../../script/details/details.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="javascript:history.go(-1);" class="back">
+      <</a>
+        <span>
+          <i class="iconfont icon-share"></i>
+        </span>
+        <h1>明星师资</h1>
+  </header>
+  <div class="banner">
+    <img src="../../images/starteacher.jpg" alt="名师 不止传授知识">
+  </div>
+
+  <main>
+    <div class="appraisal">
+      <ul>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/teacher1.png">
+          </div>
+          <div class="content">
+            <h2>Alex Tang</h2>
+            <span>累计课时: 10000课时</span>
+            <p>
+              金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院。
+            </p>
+            <a href="../../html/details/teacherdetails.html"></a>
+          </div>
+        </li>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/teacher1.png">
+          </div>
+          <div class="content">
+            <h2>Bob Hong</h2>
+            <span>累计课时: 10000课时</span>
+            <p>
+              金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院。 
+            </p>
+            <a href="javascript:;"></a>
+          </div>
+        </li>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/teacher1.png">
+          </div>
+          <div class="content">
+            <h2>Jcy</h2>
+            <span>累计课时: 6000课时</span>
+            <p>
+              金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院。 
+            </p>
+            <a href="javascript:;"></a>
+          </div>
+        </li>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/teacher1.png">
+          </div>
+          <div class="content">
+            <h2>Han</h2>
+            <span>累计课时: 3000课时</span>
+            <p>
+              金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院。 
+            </p>
+            <a href="javascript:;"></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- 分享弹窗 -->
+  <div class="sharemodal">
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_32x32 share">
+      <a class="jiathis_button_cqq"></a>
+      <a class="jiathis_button_weixin"></a>
+      <a class="jiathis_button_tsina"></a>
+    </div>
+    <script type="text/javascript">
+      var _title = document.querySelector("h2").innerHTML
+      // var _summary = document.querySelector("article section").innerText
+      var jiathis_config = {
+        url: window.location.href,
+        summary: "某摘要",
+        title: _title,
+        pic: "某地址",
+        shortUrl: false,
+        hideMore: false
+      }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <div class="cancel">
+      取消
+    </div>
+  </div>
+</body>
+
+</html>

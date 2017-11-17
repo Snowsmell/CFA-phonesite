@@ -1,0 +1,450 @@
+/*
+ * 重置
+ */
+/*---------- normalize ----------*/
+/* margin:0, padding:0 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC", arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+/* html5 shiv */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/* Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/* hidden */
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+/* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* abbr */
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+/* b, strong */
+b,
+strong {
+  font-weight: bold;
+  font-family: arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+}
+/* code,kbd,pre,samp */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/* <del>常用于产品原价，此时Tahoma字体删除线有问题，故改用Arial字体 */
+del {
+  font-family: Arial;
+}
+/* img */
+img {
+  vertical-align: middle;
+  border: 0;
+}
+/* list-style */
+li {
+  list-style: none;
+}
+/* mark */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/* pre */
+pre {
+  white-space: pre-wrap;
+}
+/* quote */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+/* sub, sup */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Correct overflow displayed oddly in IE 9. */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* reset fonts */
+address,
+caption,
+cite,
+dfn,
+em,
+i,
+q,
+th {
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+}
+/* table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+}
+/*---------- form & button ----------*/
+/* fieldset,legend */
+fieldset,
+legend {
+  border: 0;
+}
+/* 
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
+// 2. Correct inability to style clickable `input` types in iOS.
+// 3. Improve usability and consistency of cursor style between image-type `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+/* disabled */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/* reset fonts */
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+/* Reset unusual Firefox-on-Android default style. See https://github.com/necolas/normalize.css/issues/214 */
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+/* Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* 
+// Fix for Chrome number input
+// Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
+// See https://github.com/twbs/bootstrap/issues/8350 for more.
+ */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+/* textarea */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+html,
+body {
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+}
+header {
+  display: flex;
+  padding: 15px 20px 0;
+  position: relative;
+  box-shadow: 0 5px 5px #ddd;
+}
+header > a.back {
+  float: left;
+  font-size: 24px;
+  font-family: '宋体';
+  margin-top: -3px;
+  text-shadow: .1px .1px #000;
+}
+header ul {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+header ul li {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+header ul li span {
+  padding-bottom: 15px;
+  border-bottom: 1px solid transparent;
+  transition: all .5s;
+  text-shadow: .1px .1px #333;
+}
+header ul li.current span {
+  border-bottom: 1px solid #2525e9;
+}
+header a.search {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel.banner {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 143px;
+  overflow: hidden;
+}
+.carousel.banner > ul {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel.banner > ul > li {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+.carousel.banner > ul > li a {
+  display: block;
+}
+.carousel.banner > ul > li a img {
+  max-width: 100%;
+  min-height: 160px;
+}
+.carousel.banner > ul > li p {
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel.banner > ol {
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  text-align: right;
+  padding-right: 4%;
+  font-size: 0;
+}
+.carousel.banner > ol > li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.carousel.banner > ol > li.active {
+  background-color: #fff;
+  width: 11px;
+  height: 11px;
+}
+main {
+  padding: 25px 20px;
+}
+main > ul li {
+  display: flex;
+  flex: 1;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+main > ul li .imgbox {
+  flex: .35;
+  height: 140px;
+}
+main > ul li .imgbox img {
+  height: 140px;
+  max-width: 100%;
+}
+main > ul li .content {
+  order: -1;
+  position: relative;
+  flex: .63;
+  min-height: 140px;
+}
+main > ul li .content h3 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+main > ul li .content .score {
+  position: absolute;
+  bottom: 0;
+}
+main > ul li .content .score img,
+main > ul li .content .score span {
+  vertical-align: middle;
+  height: 18px;
+  line-height: 18px;
+}
+main > ul li .content .score img {
+  margin-top: -2px;
+  width: 50%;
+  max-width: 140px;
+}
+main > ul li .content .score span {
+  display: inline-block;
+  color: #888;
+}
+main > ul li .content .score span:nth-of-type(2) {
+  padding-left: 15px;
+  margin-left: 15px;
+  border-left: 1px solid #888;
+}
+main > ul li .content > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+main > ul li:last-of-type {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+@media (max-width: 480px) {
+  main {
+    padding: 25px 5px;
+  }
+  main > ul li .content h3 {
+    font-size: 20px;
+  }
+  main > ul li .content .score {
+    line-height: 20px;
+  }
+}
+@media (max-width: 375px) {
+  main > ul li .content h3 {
+    font-size: 18px;
+    text-shadow: .1px .1px #000;
+  }
+}
+@media (max-width: 360px) {
+  header ul li {
+    font-size: 12px;
+  }
+}

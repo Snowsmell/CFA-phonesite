@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录/注册</title>
+
+  <link rel="stylesheet" href="../../css/font/iconfont.css">
+  <link rel="stylesheet" href="../../css/personcenter/login.css">
+  <script src="../../script/jquery-1.11.2.min.js"></script>
+  <script src="../../script/personcenter/login.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="javascript:history.back(-1)" class="back">
+      <</a>
+        <h2>登录注册</h2>
+  </header>
+  <main>
+    <div class="nav">
+      <span class="current">登录</span>
+      <span>注册</span>
+    </div>
+    <div class="form">
+
+      <div class="login">
+        <label for="">
+          <input type="text" placeholder="手机号或邮箱">
+        </label>
+        <label for="" class="psd">
+          <input type="password" placeholder="请输入密码">
+          <i class="iconfont icon-psd-close"></i>
+          <i class="iconfont icon-psd-see"></i>
+        </label>
+        <button>登录</button>
+        <p>
+          <label for="">
+            <input type="checkbox"> 两周免登录
+          </label>
+          <a href="javascript:;">忘记密码?</a>
+        </p>
+        <div class="others">
+          <span>其他方式登录</span>
+          <div>
+            <a href="javascript:;">
+              <img src="../../images/qq.png" alt="qq登录">
+            </a>
+            <a href="javascript:;">
+              <img src="../../images/weixin.png" alt="微信登录">
+            </a>
+            <a href="javascript:;">
+              <img src="../../images/weibo.png" alt="微博登录">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="register">
+        <label for="">
+          <input type="text" placeholder="手机号">
+        </label>
+        <label for="" class="testpic">
+          <input type="text" placeholder="请输入验证码">
+          <div>
+              <img src="../../images/testpic.png" alt="测试用的而已">
+          </div>
+        </label>
+        <button>注册</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

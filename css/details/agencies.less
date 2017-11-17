@@ -1,0 +1,162 @@
+@import "../public/base.less";
+@import "../public/headerfooter.less";
+html,
+body {
+    max-width: 750px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #f3f5f7;
+}
+
+header {
+    display: flex;
+    flex: 1;
+    padding: 15px 20px;
+    position: relative;
+    align-items: center;
+    background-color: #fff;
+    >a.back {
+        font-size: 24px;
+        font-family: '宋体';
+        margin-top: -3px;
+        text-shadow: .1px .1px #000;
+        order: 1;
+        flex: 0 0 30px;
+    }
+    h1 {
+        order: 2;
+        flex: 1;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    span {
+        order: 3;
+        flex: 0 0 30px;
+    }
+}
+ 
+img {
+    max-width: 100%;
+}
+main{
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  h2{
+    text-align: center;
+    color:#3c3d46;
+    font-size: 24px;
+    margin-bottom: 20px;
+    p{
+      font-size: 18px;
+      color:#333;
+      font-weight: 400;
+    }
+  }
+  dl{
+    border: 1px solid #e6e7f2;
+    margin-bottom: 15px;
+    dt,dd{
+      position: relative;
+    }
+    dt{
+      img{
+        width: 100%;
+      }
+      span{
+        position: absolute;
+        color:#f59f23;
+        font-size: 24px;
+        top:50%;
+        left:20px;
+        transform: translateY(-50%);
+      }
+    }
+    dd{
+      padding: 0 20px 0 25px;
+      line-height: 24px;
+      font-size: 16px;
+      text-align: justify;
+      color:#585969;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #333;
+        top:10px;
+        left:15px;
+      }
+      &:first-of-type{
+        margin-top: 15px;
+      }
+      &:last-of-type{
+        margin-bottom: 15px;
+      }      
+    }
+    >p{
+      padding: 20px;
+      line-height: 24px;
+      color:#585969
+    }
+  }
+  >a{
+    display: block;
+    background-image: -moz-linear-gradient( 0deg, rgb(251,203,124) 0%, rgb(247,168,54) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(251,203,124) 0%, rgb(247,168,54) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(251,203,124) 0%, rgb(247,168,54) 100%);
+    height: 45px;
+    width: 280px;
+    border-radius: 45px;
+    line-height: 45px;
+    text-align: center;
+    color:#fff;
+    margin: 20px auto;
+  }
+  .timeline{
+    background: url("../../images/agency-time.jpg") no-repeat top center,
+                #f3f5f7;
+    padding: 35px 15px;
+    ul{
+      position: relative;
+      li{
+        font-size: 12px;
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+//分享
+.sharemodal {
+    display: none;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    .share {
+        position: fixed;
+        background-color: #eeeff7;
+        bottom: 40px;
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cancel {
+        position: fixed;
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+    }
+}

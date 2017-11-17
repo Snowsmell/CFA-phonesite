@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>学员分享</title>
+
+  <link rel="stylesheet" href="../../css/font/iconfont.css">
+  <link rel="stylesheet" href="../../css/details/sharedetails.css">
+  <script src="../../script/jquery-1.11.2.min.js"></script>
+  <script src="../../script/details/details.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="javascript:history.go(-1);" class="back">
+      <</a>
+        <span>
+          <i class="iconfont icon-share"></i>
+        </span>
+        <h1>王思琪</h1>
+  </header>
+  <main>
+    <div class="videobox">
+      <img src="../../images/sharevideo.jpg">
+      <div class="playbtn">
+        <img src="../../images/playvideo.png">
+      </div>
+    </div>
+    <article>
+      <h2>
+        王思琪：CFA三级考试通过已申 请证书
+      </h2>
+      <p>2017-04-15 14：45</p>
+      <section>
+        16年6月考过CFA三级，证书也申请下来了，CFA考试从此将淡出我的生活。自从报考CFA以来，一直在论坛混迹，但基本没浮出过水面，此处把我对CFA的思考与一些备考要点写出来做为对考友的一点贡献，主要写给准备或刚刚加入考证大军的人看。未必正确，请读者自行思考分辨
+      </section>
+      <img src="../../images/sharedetail2.jpg">
+      <h3>先简单的跟大家说说我对CFA的理解</h3>
+      <span>CFA是什么：</span>
+      <section>          
+          CFA全称Chartered Financial Analyst （特许金融分析师），是全球投资业里最为严格与含金量最高的资格认证，被称为金融第一考的考试，为全球投资业在道德操守、专业标准及知识体系等方面设立了规范与标准。自1962年设立CFA课程以来，对投资知识、准则及道德设立了全球性的标准，被广泛认知与认可。
+      </section>
+    </article>
+    <div class="share">
+      <ul>
+        <p>其他学员分享</p>
+        <li>
+          <a href="javascript:;">
+            <img src="../../images/share1.jpg">
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img src="../../images/share2.jpg">
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </main>
+  <div class="footer">
+    <a href="javascript:;">
+      <i class="iconfont icon-query"></i>
+      <p>在线咨询</p>
+    </a>
+    <a href="../../html/index.html">
+      <i class="iconfont icon-backtop"></i>
+      <p>回到首页</p>
+    </a>
+    <a href="javascript:;">
+      <i class="iconfont icon-phone"></i>
+      <p>400-700-9596</p>
+    </a>
+  </div>
+  <!-- 分享弹窗 -->
+  <div class="sharemodal">
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_32x32 share">
+      <a class="jiathis_button_cqq"></a>
+      <a class="jiathis_button_weixin"></a>
+      <a class="jiathis_button_tsina"></a>
+    </div>
+    <script type="text/javascript">
+      var _title = document.querySelector("h2").innerHTML
+      // var _summary = document.querySelector("article section").innerText
+      var jiathis_config = {
+        url: window.location.href,
+        summary: "某摘要",
+        title: _title,
+        pic: "某地址",
+        shortUrl: false,
+        hideMore: false
+      }
+    </script>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <div class="cancel">
+      取消
+    </div>
+  </div>
+</body>
+
+</html>
