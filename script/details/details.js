@@ -15,7 +15,7 @@ $(function(){
   $('nav span').on('click',function(){
     $(this).addClass('current').siblings().removeClass('current')
     if($(this).index()=='2'){
-      $(this)[0].innerHTML = '评价(1425)'
+      $(this)[0].innerHTML = "评价(1425)"
     }else{
       $('nav span')[2].innerHTML='课程评价'
     }
