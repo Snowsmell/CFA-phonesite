@@ -265,10 +265,12 @@ header {
 }
 header > a.back {
   float: left;
-  font-size: 24px;
-  font-family: '宋体';
   margin-top: -3px;
   text-shadow: .1px .1px #000;
+}
+header > a.back i.iconfont {
+  font-size: 24px;
+  line-height: 32px;
 }
 header ul {
   width: 100%;
@@ -428,7 +430,7 @@ main > ul li:last-of-type {
 }
 @media (max-width: 480px) {
   main {
-    padding: 25px 5px;
+    padding: 25px 20px;
   }
   main > ul li .content h3 {
     font-size: 20px;
@@ -438,6 +440,12 @@ main > ul li:last-of-type {
   }
 }
 @media (max-width: 375px) {
+  header {
+    padding: 15px 5px 0;
+  }
+  main {
+    padding: 25px 5px;
+  }
   main > ul li .content h3 {
     font-size: 18px;
     text-shadow: .1px .1px #000;

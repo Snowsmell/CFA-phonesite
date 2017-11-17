@@ -364,6 +364,23 @@ textarea {
     margin-top: 10px;
   }
 }
+@media (max-width: 360px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .header h1 {
+    margin-left: 0;
+  }
+  .header .login {
+    margin-left: 0;
+  }
+  .header .search {
+    flex: 0 0 100%;
+    order: 5;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 html,
 body {
   max-width: 750px;
@@ -379,13 +396,15 @@ header {
   position: relative;
 }
 header a.back {
-  font-size: 24px;
   font-family: "宋体";
   font-weight: 600;
   color: #666;
   text-shadow: .1px .1px #666;
   order: 1;
   flex: 0 0 14px;
+}
+header a.back i.iconfont {
+  font-size: 24px;
 }
 header h1 {
   padding-left: 10px;
@@ -408,8 +427,8 @@ header div {
   align-items: center;
 }
 header div span img {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
 }
 header div span .collected {
   display: none;

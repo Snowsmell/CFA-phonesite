@@ -264,9 +264,11 @@ header {
 }
 header .back {
   float: left;
-  font-size: 24px;
   justify-self: flex-start;
   font-family: '宋体';
+}
+header .back i.iconfont {
+  font-size: 24px;
 }
 header h2 {
   text-align: center;

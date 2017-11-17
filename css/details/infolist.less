@@ -11,8 +11,7 @@ header{
   box-shadow: 0 5px 5px #ddd;
   >a.back{
     float: left;
-    font-size: 24px;
-    font-family: '宋体';
+    i.iconfont{font-size: 24px;line-height: 32px;}
     margin-top: -3px;
     text-shadow: .1px .1px #000;
   }
@@ -177,7 +176,7 @@ main{
 
 @media(max-width:480px) {
   main{
-    padding: 25px 5px;
+    padding: 25px 20px;
     >ul{
       li{
         .content{
@@ -193,7 +192,11 @@ main{
   }
 }
 @media(max-width:375px) {
+  header{
+    padding: 15px 5px 0;
+  }
   main{
+    padding: 25px 5px;
     >ul{
       li{
         .content{

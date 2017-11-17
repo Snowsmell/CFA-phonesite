@@ -265,9 +265,9 @@ header {
 }
 header .back {
   float: left;
-  font-size: 24px;
-  justify-self: flex-start;
-  font-family: '宋体';
+}
+header .back i.iconfont {
+  font-size: 20px;
 }
 header h2 {
   text-align: center;
@@ -345,7 +345,7 @@ main ul li .content .score span.delete {
 }
 @media (max-width: 480px) {
   main {
-    padding: 25px 5px;
+    padding: 25px 20px;
   }
   main ul li .content h3 {
     font-size: 22px;
@@ -355,6 +355,12 @@ main ul li .content .score span.delete {
   }
 }
 @media (max-width: 375px) {
+  header {
+    padding: 0 5px;
+  }
+  main {
+    padding: 25px 5px;
+  }
   main ul li .content h3 {
     font-size: 18px;
     text-shadow: .1px .1px #000;

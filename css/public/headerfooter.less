@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;  
-    img{
-    }  
     h1 {
         font-size: 24px;
         color: #4665ff;
@@ -103,6 +101,22 @@
     .header {
         flex-wrap: wrap;
         h1{margin-right: 0}
+        .login{
+          margin-left: 0;
+        }
+        .search {
+            flex: 0 0 100%;
+            order: 5;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media(max-width:360px) {
+    .header {
+        flex-wrap: wrap;
+        h1{margin-left: 0}
         .login{
           margin-left: 0;
         }

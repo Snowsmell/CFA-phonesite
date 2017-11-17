@@ -12,9 +12,9 @@ header{
   padding: 0 20px;
   .back{
     float: left;
-    font-size: 24px;
-    justify-self: flex-start;
-    font-family: '宋体';
+    i.iconfont{
+      font-size: 20px;
+    }
   }
   h2{
     text-align: center;
@@ -120,7 +120,7 @@ main{
 
 @media(max-width:480px) {
   main{
-    padding: 25px 5px;
+    padding: 25px 20px;
     ul{
       li{
         .content{
@@ -139,7 +139,9 @@ main{
   }
 }
 @media(max-width:375px) {
+  header{padding:0 5px}
   main{
+    padding: 25px 5px;
     ul{
       li{
         .content{
