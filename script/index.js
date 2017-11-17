@@ -167,7 +167,7 @@ $(function () {
         hotnews.style.marginTop = 0;
         distance = 0
       }
-    }, 50)
+    }, 75)
   }
   carouselMobile()
   hotnews()
