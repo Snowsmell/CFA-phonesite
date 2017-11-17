@@ -618,7 +618,7 @@ main .testinfo ul li .content p {
 }
 main .testinfo ul li .content p span:first-of-type {
   padding-right: 20px;
-  border-right: 1px solid #000;
+  border-right: 1px solid #999;
   margin-right: 20px;
 }
 main .testinfo ul li .imgbox {
@@ -976,6 +976,9 @@ main .getdata form input[type='submit'] {
   }
   main .testinfo ul li .imgbox {
     flex: 0 0 150px;
+  }
+  main .teachers ul li div span {
+    font-size: 14px;
   }
   main .agencies ul {
     padding: 20px 15px;
