@@ -251,6 +251,137 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
+.header {
+  background-color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .logobox {
+  flex: 0 0 120px;
+  order: -1;
+}
+.header .logobox img {
+  width: 100%;
+}
+.header h1 {
+  flex: 0 0 65px;
+  font-size: 24px;
+  color: #4665ff;
+  font-style: italic;
+  text-shadow: .5px .5px #4665ff;
+  margin: 0 20px;
+  padding-left: 15px;
+  border-left: 1px solid #dbdee1;
+}
+.header .search {
+  flex: 1;
+  position: relative;
+  line-height: 56px;
+  height: 56px;
+  font-size: 22px;
+  background-color: #f3f5f7;
+  border-radius: 5px;
+  font-weight: 400;
+  padding-left: 15px;
+  color: #999;
+  width: 320px;
+}
+.header .search i.iconfont {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  color: #b7bbbf;
+}
+.header .search > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header .login {
+  align-content: flex-end;
+  margin-left: 15px;
+  order: 5;
+  flex: 0 0 28px;
+}
+.header .login img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.footer.common {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  z-index: 666;
+}
+.footer {
+  height: 50px;
+  width: 100%;
+  max-width: 750px;
+  background: #fff;
+  box-shadow: 5px 0 10px #ddd;
+  display: flex;
+  justify-content: space-around;
+  color: #8c919b;
+}
+.footer > a {
+  width: 33%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.footer > a i {
+  font-size: 20px;
+}
+.footer > a p {
+  width: 100%;
+}
+@media (max-width: 640px) {
+  .header {
+    padding: 15px;
+    flex: 1;
+  }
+  .header img {
+    flex: 0 0 150px;
+  }
+  .header h1 {
+    flex: 0 0 50px;
+  }
+  .header .search {
+    flex: 1;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 0 10px;
+    height: 60px;
+  }
+  .header h1 {
+    margin: 0 5px;
+    padding-left: 5px;
+  }
+  .header .login {
+    margin-left: 5px;
+  }
+  .header .search {
+    order: 5;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+  }
+}
 html,
 body {
   max-width: 750px;
@@ -342,63 +473,60 @@ main .detail .introduce {
 main .detail .introduce h2 {
   font-weight: 400;
   font-size: 18px;
-  padding: 0 0 20px;
+  padding: 0 0 10px;
 }
-main .detail .introduce > ul {
-  overflow: hidden;
+main .detail .introduce p {
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 10px;
+}
+main .detail .introduce > div {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding-top: 10px;
   border-top: 1px solid #ddd;
-  padding: 10px;
 }
-main .detail .introduce > ul li {
-  float: left;
-  width: 45%;
+main .detail .introduce > div .left span {
+  vertical-align: middle;
 }
-main .detail .introduce > ul li:nth-of-type(1) {
-  margin-right: 5%;
+main .detail .introduce > div .left img {
+  vertical-align: middle;
+  width: 143px;
 }
-main .detail .introduce > ul li:nth-of-type(1) span {
-  float: left;
-  width: 40px;
-}
-main .detail .introduce > ul li:nth-of-type(1) .imgbox {
-  margin-left: 40px;
-}
-main .detail .introduce > ul li:nth-of-type(1) .imgbox img {
-  max-width: 100%;
-  height: 18px;
-}
-main .detail .introduce > ul li:nth-of-type(2) {
-  text-align: center;
-  border-left: 1px solid #ddd;
-}
-main .detail > ul {
-  margin-top: 15px;
-  padding: 25px 20px;
+main .detail ul {
+  margin-top: 10px;
   background-color: #fff;
+  padding: 0 20px;
 }
-main .detail > ul li {
+main .detail ul p {
+  margin-bottom: 10px;
+}
+main .detail ul li {
   display: flex;
   flex: 1;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
-main .detail > ul li .imgbox {
-  flex: .35;
-  height: 140px;
+main .detail ul li .imgbox {
+  flex: 0 0 150px;
+  height: 100px;
 }
-main .detail > ul li .imgbox img {
-  height: 140px;
+main .detail ul li .imgbox img {
+  height: 100px;
   max-width: 100%;
 }
-main .detail > ul li .content {
+main .detail ul li .content {
   position: relative;
-  flex: .63;
+  flex: 1;
   padding-left: 5px;
-  min-height: 140px;
+  min-height: 100px;
 }
-main .detail > ul li .content h3 {
+main .detail ul li .content h3 {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
@@ -406,46 +534,49 @@ main .detail > ul li .content h3 {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-main .detail > ul li .content p {
+main .detail ul li .content p {
   color: #666;
-  font-size: 16px;
-  margin: 15px 0;
+  font-size: 14px;
+  margin: 10px 0;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-main .detail > ul li .content .score {
+main .detail ul li .content .score {
   position: absolute;
   bottom: 0;
 }
-main .detail > ul li .content .score img,
-main .detail > ul li .content .score span {
+main .detail ul li .content .score img,
+main .detail ul li .content .score span {
   vertical-align: middle;
-  height: 18px;
-  line-height: 18px;
+  height: 15px;
+  line-height: 15px;
 }
-main .detail > ul li .content .score img {
+main .detail ul li .content .score img {
   margin-top: -2px;
   width: 50%;
   max-width: 140px;
 }
-main .detail > ul li .content .score span {
+main .detail ul li .content .score span {
   display: inline-block;
   color: #888;
 }
-main .detail > ul li .content .score span:nth-of-type(2) {
+main .detail ul li .content .score span:nth-of-type(2) {
   padding-left: 15px;
   margin-left: 15px;
   border-left: 1px solid #888;
 }
-main .detail > ul li .content > a {
+main .detail ul li .content > a {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+main .detail ul li:last-of-type {
+  margin-bottom: 0;
 }
 main .detail .concrete {
   background: #fff;
@@ -582,17 +713,28 @@ main > button {
 }
 @media (max-width: 480px) {
   main .detail > ul {
-    padding: 25px 5px;
-  }
-  main .detail > ul li .content h3 {
-    font-size: 18px;
-  }
-  main .detail > ul li .content p {
-    font-size: 16px;
+    padding: 15px 20px;
   }
   main .detail > ul li .content .score {
-    line-height: 20px;
+    line-height: 15px;
     font-size: 12px;
+  }
+  main .detail > ul li .content .score span:nth-of-type(2) {
+    padding-left: 5px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 375px) {
+  main .detail > ul li .content h3 {
+    font-size: 16px;
+  }
+  main .detail > ul li .content p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  main .detail > ul li .content .score img {
+    width: 40%;
+    height: 10px;
   }
   main .detail > ul li .content .score span:nth-of-type(2) {
     padding-left: 0;
@@ -600,27 +742,30 @@ main > button {
     border-left: none;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 360px) {
+  main .detail > ul li .imgbox {
+    flex: 0 0 120px;
+    height: 80px;
+  }
+  main .detail > ul li .imgbox img {
+    height: 80px;
+  }
+  main .detail > ul li .content {
+    min-height: 80px;
+  }
   main .detail > ul li .content h3 {
-    font-size: 16px;
-    text-shadow: .1px .1px #000;
+    font-size: 14px;
   }
   main .detail > ul li .content p {
-    font-size: 14px;
-    overflow: hidden;
-    display: -webkit-box;
-    word-break: break-all;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    font-size: 12px;
     margin: 8px 0;
   }
-  main .detail > ul li .content .score {
-    line-height: 20px;
+  main .detail > ul li .content .score img {
+    width: 40%;
+    height: 10px;
   }
   main .detail > ul li .content .score span:nth-of-type(2) {
-    padding-left: 0;
-    margin-left: 0;
-    border-left: none;
+    padding-left: 10px;
   }
 }
 .sharemodal {
@@ -632,6 +777,7 @@ main > button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
 }
 .sharemodal .share {
   position: fixed;

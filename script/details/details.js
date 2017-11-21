@@ -1,7 +1,7 @@
 $(function(){
   //关于收藏的切换
-  $('.collectbtn img').on('click',function(){
-    $(this).hide().siblings('img').show()
+  $('.collectbtn i').on('click',function(){
+    $(this).hide().siblings('i').show()
   })
   //关于分享的切换
   $('.icon-share').on('click',function(){
@@ -37,4 +37,17 @@ $(function(){
     })
   }
   givescore()
+
+  
+  //判断是否到底部
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    var scrollHeight = $(document).height();
+    var windowHeight = $(this).height();
+    if (scrollTop + windowHeight > scrollHeight - 60) {
+      $('.footer').removeClass('common')
+    } else {
+      $('.footer').addClass('common')
+    }
+  });  
 })

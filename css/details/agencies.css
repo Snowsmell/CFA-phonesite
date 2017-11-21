@@ -258,7 +258,15 @@ textarea {
   align-items: center;
   justify-content: space-around;
 }
+.header .logobox {
+  flex: 0 0 120px;
+  order: -1;
+}
+.header .logobox img {
+  width: 100%;
+}
 .header h1 {
+  flex: 0 0 65px;
   font-size: 24px;
   color: #4665ff;
   font-style: italic;
@@ -283,9 +291,9 @@ textarea {
 .header .search i.iconfont {
   position: absolute;
   right: 10px;
-  font-size: 28px;
+  top: 2px;
+  font-size: 20px;
   color: #b7bbbf;
-  cursor: pointer;
 }
 .header .search > a {
   position: absolute;
@@ -297,14 +305,26 @@ textarea {
 .header .login {
   align-content: flex-end;
   margin-left: 15px;
+  order: 5;
+  flex: 0 0 28px;
 }
 .header .login img {
-  width: 56px;
-  height: 56px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
 }
+.footer.common {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  z-index: 666;
+}
 .footer {
-  height: 70px;
+  height: 50px;
+  width: 100%;
+  max-width: 750px;
   background: #fff;
   box-shadow: 5px 0 10px #ddd;
   display: flex;
@@ -312,20 +332,19 @@ textarea {
   color: #8c919b;
 }
 .footer > a {
+  width: 33%;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
 }
 .footer > a i {
-  font-size: 24px;
+  font-size: 20px;
 }
 .footer > a p {
   width: 100%;
-}
-.footer > a:nth-of-type(2) {
-  margin-left: 15px;
 }
 @media (max-width: 640px) {
   .header {
@@ -343,42 +362,24 @@ textarea {
     width: 100%;
     font-size: 16px;
   }
-  .header .login {
-    flex: 0 0 50px;
-  }
 }
 @media (max-width: 480px) {
   .header {
-    flex-wrap: wrap;
+    padding: 0 10px;
+    height: 60px;
   }
   .header h1 {
-    margin-right: 0;
+    margin: 0 5px;
+    padding-left: 5px;
   }
   .header .login {
-    margin-left: 0;
+    margin-left: 5px;
   }
   .header .search {
-    flex: 0 0 100%;
     order: 5;
     width: 100%;
-    margin-top: 10px;
-  }
-}
-@media (max-width: 360px) {
-  .header {
-    flex-wrap: wrap;
-  }
-  .header h1 {
-    margin-left: 0;
-  }
-  .header .login {
-    margin-left: 0;
-  }
-  .header .search {
-    flex: 0 0 100%;
-    order: 5;
-    width: 100%;
-    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
   }
 }
 html,

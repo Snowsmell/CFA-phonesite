@@ -345,8 +345,8 @@ header a.search {
 }
 .carousel.banner > ol > li {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border: 1px solid #fff;
   border-radius: 50%;
   margin-right: 10px;
@@ -354,8 +354,8 @@ header a.search {
 }
 .carousel.banner > ol > li.active {
   background-color: #fff;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
 }
 main {
   padding: 25px 20px;
@@ -369,18 +369,17 @@ main > ul li {
   border-bottom: 1px solid #ddd;
 }
 main > ul li .imgbox {
-  flex: .35;
-  height: 140px;
+  flex: 0 0 150px;
 }
 main > ul li .imgbox img {
-  height: 140px;
+  height: 100px;
   max-width: 100%;
 }
 main > ul li .content {
   order: -1;
   position: relative;
-  flex: .63;
-  min-height: 140px;
+  flex: 1;
+  min-height: 100px;
 }
 main > ul li .content h3 {
   color: #333;
@@ -433,7 +432,7 @@ main > ul li:last-of-type {
     padding: 25px 20px;
   }
   main > ul li .content h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
   main > ul li .content .score {
     line-height: 20px;
@@ -447,12 +446,42 @@ main > ul li:last-of-type {
     padding: 25px 5px;
   }
   main > ul li .content h3 {
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: .1px .1px #000;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 }
 @media (max-width: 360px) {
   header ul li {
     font-size: 12px;
+  }
+  main {
+    padding: 15px 5px;
+  }
+  main > ul li {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  main > ul li .imgbox {
+    flex: 0 0 120px;
+  }
+  main > ul li .imgbox img {
+    height: 80px;
+  }
+  main > ul li .content {
+    min-height: 80px;
+  }
+  main > ul li .content h3 {
+    font-size: 14px;
+    text-shadow: .1px .1px #000;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 }

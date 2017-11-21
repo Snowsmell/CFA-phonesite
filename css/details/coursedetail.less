@@ -1,4 +1,5 @@
 @import "../public/base.less";
+@import "../public/headerfooter.less";  
 html,
 body {
     max-width: 750px;
@@ -15,12 +16,12 @@ header {
     box-shadow: 0 5px 5px #ddd;
     align-items: center;
     background-color: #fff;
-    >a.back{
+    >a.back {
         float: left;
-        i.iconfont{
-          font-size: 20px;
+        i.iconfont {
+            font-size: 20px;
         }
-      }
+    }
     h1 {
         order: 2;
         flex: 1;
@@ -88,75 +89,74 @@ nav {
 }
 
 main {
-    .detail {      
+    .detail {
         .introduce {
             background-color: #fff;
             padding: 20px;
             h2 {
                 font-weight: 400;
                 font-size: 18px;
-                padding: 0 0 20px;
+                padding: 0 0 10px;
             }
-            >ul {
-                overflow: hidden;
+            p {
+                font-size: 14px;
+                color: #666;
+                padding-bottom: 10px;
+            }
+            >div {
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 12px;
+                padding-top: 10px;
                 border-top: 1px solid #ddd;
-                padding: 10px;
-                li {
-                    float: left;
-                    width: 45%;
-                    &:nth-of-type(1) {
-                        margin-right: 5%;
-                        span {
-                            float: left;
-                            width: 40px;
-                        }
-                        .imgbox {
-                            margin-left: 40px;
-                            img {
-                                max-width: 100%;
-                                height: 18px;
-                            }
-                        }
+                .left {
+                    span {
+                        vertical-align: middle;
                     }
-                    &:nth-of-type(2) {
-                        text-align: center;
-                        border-left: 1px solid #ddd;
+                    img {
+                        vertical-align: middle;
+                        width: 143px;
                     }
                 }
             }
         }
-        >ul {
-            margin-top: 15px;
-            padding: 25px 20px;
+        ul {
+            margin-top: 10px;
             background-color: #fff;
+            padding: 0 20px;
+            p{
+                margin-bottom: 10px;
+            }
             li {
                 display: flex;
                 flex: 1;
-                margin-bottom: 25px;
+                margin-bottom: 15px;
                 justify-content: space-between;
                 .imgbox {
-                    flex: .35;
-                    height: 140px;
+                    flex: 0 0 150px;
+                    height: 100px;
                     img {
-                        height: 140px;
+                        height: 100px;
                         max-width: 100%
                     }
                 }
                 .content {
                     position: relative;
-                    flex: .63;
+                    flex: 1;
                     padding-left: 5px;
-                    min-height: 140px;
+                    min-height: 100px;
                     h3 {
                         color: #333;
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 400;
                         .spill(1);
                     }
                     p {
                         color: #666;
-                        font-size: 16px;
-                        margin: 15px 0;
+                        font-size: 14px;
+                        margin: 10px 0;
                         .spill(2);
                     }
                     .score {
@@ -165,8 +165,8 @@ main {
                         img,
                         span {
                             vertical-align: middle;
-                            height: 18px;
-                            line-height: 18px;
+                            height: 15px;
+                            line-height: 15px;
                         }
                         img {
                             margin-top: -2px;
@@ -191,167 +191,163 @@ main {
                         height: 100%;
                     }
                 }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
             }
         }
-        .concrete{
-          background: #fff;
-          margin-top: 10px;
-          padding: 20px;
-          >p{
-            margin: 10px 0 20px;
-            font-size: 18px;
-          }
+        .concrete {
+            background: #fff;
+            margin-top: 10px;
+            padding: 20px;
+            >p {
+                margin: 10px 0 20px;
+                font-size: 18px;
+            }
         }
         .cd_kaoyan_mobile_170810 {
-          padding-top: 0;
-          .teacher{
-            margin-top: 0;
-          }
+            padding-top: 0;
+            .teacher {
+                margin-top: 0;
+            }
         }
     }
-    .mainpoint{
-      display: none;
-      background-color: #fff;
-      padding: 20px 20px 0;
-      dl{
-        position: relative;
-        padding-left:7.5%;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-        i.iconfont{
-          position: absolute;
-          top:5px;
-          left:0;
-          font-size: 14px;
-          color:#999;
-        }
-        dt{
-          font-size: 18px;
-          margin: 15px 0;
-        }
-        dd{
-          position: relative;
-          background-color: #f3f5f7;
-          margin-bottom: 10px;
-          padding: 5px 10px 5px 20px;
-          span{
-            float: right;
-            color:#999;
-          }
-          &:before{
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-top: 4px solid transparent;
-            border-left: 8px solid #8a8d9c;
-            border-bottom: 4px solid transparent;
-            left: 5px;
-            top: 12px;
-          }
-        }
-        &:last-of-type{
-          border-bottom: none;
-        }
-      }
-    } 
-    .appraisal{
-      display: none;
-      background-color: #fff;
-      padding: 20px;
-      ul{
-        li{
-          overflow: hidden;
-          padding: 15px 0;
-          border-bottom: 1px solid #ddd;
-          .personhead{
-            float: left;
-            width: 60px;
-            img{
-              width: 60px;
-              height: 60px;
-              border-radius: 50%;
+    .mainpoint {
+        display: none;
+        background-color: #fff;
+        padding: 20px 20px 0;
+        dl {
+            position: relative;
+            padding-left: 7.5%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            i.iconfont {
+                position: absolute;
+                top: 5px;
+                left: 0;
+                font-size: 14px;
+                color: #999;
             }
-          }
-          .content{
-            margin-left: 75px;
-            .baseinfo{
-              height: 18px;
-              line-height: 18px;
-              >div{
-                margin-right: 55px;
-              }
-              span{
-                vertical-align: middle;
-              }
-              >span{
-                float: right;
-                font-size: 12px;
-                color:#999;
-                width: 52px;
-              }
+            dt {
+                font-size: 18px;
+                margin: 15px 0;
             }
-            >p{
-              margin: 20px 0 0;
-              line-height: 24px;
+            dd {
+                position: relative;
+                background-color: #f3f5f7;
+                margin-bottom: 10px;
+                padding: 5px 10px 5px 20px;
+                span {
+                    float: right;
+                    color: #999;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-top: 4px solid transparent;
+                    border-left: 8px solid #8a8d9c;
+                    border-bottom: 4px solid transparent;
+                    left: 5px;
+                    top: 12px;
+                }
             }
-            >p.teacherreply{
-              background-color: #f3f5f7;
-              padding: 10px;
-              span{
-                color:red
-              }
+            &:last-of-type {
+                border-bottom: none;
             }
-          }
-          &:last-of-type{
-            border-bottom: none;
-            padding-bottom: 0;
-          }
         }
-      }
-      >a{
-          margin-top: 10px;
-          display: block;
-          width: 100%;
-          height: 30px;
-          line-height: 30px;
-          text-align: center;
-          background-color: #f3f5f7
-      }
     }
-    >button{
-      margin-top: 20px;
-      background-color: #706ffe;
-      width: 100%;
-      border: none;
-      color:#fff;
-      font-size: 18px;
-      height: 50px;
-      letter-spacing: 2px;
-    }    
+    .appraisal {
+        display: none;
+        background-color: #fff;
+        padding: 20px;
+        ul {
+            li {
+                overflow: hidden;
+                padding: 15px 0;
+                border-bottom: 1px solid #ddd;
+                .personhead {
+                    float: left;
+                    width: 60px;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                }
+                .content {
+                    margin-left: 75px;
+                    .baseinfo {
+                        height: 18px;
+                        line-height: 18px;
+                        >div {
+                            margin-right: 55px;
+                        }
+                        span {
+                            vertical-align: middle;
+                        }
+                        >span {
+                            float: right;
+                            font-size: 12px;
+                            color: #999;
+                            width: 52px;
+                        }
+                    }
+                    >p {
+                        margin: 20px 0 0;
+                        line-height: 24px;
+                    }
+                    >p.teacherreply {
+                        background-color: #f3f5f7;
+                        padding: 10px;
+                        span {
+                            color: red
+                        }
+                    }
+                }
+                &:last-of-type {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        >a {
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #f3f5f7
+        }
+    }
+    >button {
+        margin-top: 20px;
+        background-color: #706ffe;
+        width: 100%;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        height: 50px;
+        letter-spacing: 2px;
+    }
 }
 
 @media(max-width:480px) {
     main {
         .detail {
             >ul {
-                padding: 25px 5px;
+                padding: 15px 20px;
                 li {
                     .content {
-                        h3 {
-                            font-size: 18px
-                        }
-                        p {
-                            font-size: 16px;
-                        }
                         .score {
-                            line-height: 20px;
+                            line-height: 15px;
                             font-size: 12px;
                             span {
                                 &:nth-of-type(2) {
-                                    padding-left: 0;
+                                    padding-left: 5px;
                                     margin-left: 0;
-                                    border-left: none
                                 }
                             }
                         }
@@ -370,15 +366,16 @@ main {
                     .content {
                         h3 {
                             font-size: 16px;
-                            text-shadow: .1px .1px #000;
                         }
                         p {
                             font-size: 14px;
-                            .spill(3);
                             margin: 8px 0;
                         }
                         .score {
-                            line-height: 20px;
+                            img{
+                                width: 40%;
+                                height: 10px;
+                            }
                             span {
                                 &:nth-of-type(2) {
                                     padding-left: 0;
@@ -393,7 +390,44 @@ main {
         }
     }
 }
-
+@media(max-width:360px) {
+    main {
+        .detail {
+            >ul {
+                li {
+                    .imgbox{
+                        flex: 0 0 120px;
+                        height: 80px;
+                        img{
+                            height: 80px;
+                        }
+                    }
+                    .content {
+                        min-height: 80px;
+                        h3 {
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 12px;
+                            margin: 8px 0;
+                        }
+                        .score {
+                            img{
+                                width: 40%;
+                                height: 10px;
+                            }
+                            span {
+                                &:nth-of-type(2) {
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 //分享
 .sharemodal {
     display: none;
@@ -404,6 +438,7 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .4);
+    z-index: 999;
     .share {
         position: fixed;
         background-color: #eeeff7;

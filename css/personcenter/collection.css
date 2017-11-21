@@ -287,27 +287,26 @@ main ul li {
   border-bottom: 1px solid #ddd;
 }
 main ul li .imgbox {
-  flex: .3;
-  height: 140px;
+  flex: 0 0 150px;
 }
 main ul li .imgbox img {
-  height: 140px;
+  height: 100px;
   max-width: 100%;
 }
 main ul li .content {
   order: -1;
   position: relative;
-  flex: .68;
-  min-height: 140px;
+  flex: 1;
+  min-height: 100px;
 }
 main ul li .content h3 {
   color: #333;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 main ul li .content .score {
@@ -316,54 +315,39 @@ main ul li .content .score {
   padding-right: 20px;
   bottom: 0;
 }
-main ul li .content .score img,
 main ul li .content .score span {
   vertical-align: middle;
-  height: 18px;
-  line-height: 18px;
-}
-main ul li .content .score img {
-  margin-top: -2px;
-  width: 50%;
-  max-width: 140px;
+  height: 15px;
+  line-height: 15px;
 }
 main ul li .content .score span {
   display: inline-block;
-  line-height: 26px;
   color: #888;
 }
 main ul li .content .score span:nth-of-type(2) {
-  padding-left: 15px;
-  margin-left: 15px;
+  padding-left: 10px;
+  margin-left: 10px;
   border-left: 1px solid #ddd;
 }
 main ul li .content .score span.delete {
   float: right;
-  width: 26px;
-  height: 26px;
-  background-image: url('../../images/rubbish.png');
+  line-height: 20px;
 }
-@media (max-width: 480px) {
-  main {
-    padding: 25px 20px;
-  }
-  main ul li .content h3 {
-    font-size: 22px;
-  }
-  main ul li .content .score {
-    line-height: 26px;
-  }
-}
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   header {
     padding: 0 5px;
   }
   main {
-    padding: 25px 5px;
+    padding: 15px 5px;
   }
-  main ul li .content h3 {
-    font-size: 18px;
-    text-shadow: .1px .1px #000;
+  main ul li .imgbox {
+    flex: 0 0 120px;
+  }
+  main ul li .imgbox img {
+    height: 80px;
+  }
+  main ul li .content {
+    min-height: 80px;
   }
 }
 .deletemodal {
@@ -386,7 +370,7 @@ main ul li .content .score span.delete {
   -webkit-transform: translate(-50%, -50%);
 }
 .deletemodal .box p {
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 20px;
   text-align: center;
 }
@@ -399,7 +383,7 @@ main ul li .content .score span.delete {
   font-size: 16px;
   text-align: center;
   color: #4665ff;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .deletemodal .box .btns span:first-of-type {
   border-right: 1px solid #eee;

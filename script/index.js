@@ -23,7 +23,7 @@ $(function () {
       }
     }
     setHeight();
-    
+
     window.addEventListener('resize', function () {
       clearTimeout(timer2);
       timer2 = setTimeout(function () {
@@ -45,7 +45,7 @@ $(function () {
 
 
     //自动轮播
-    timer = setInterval(showNext, 8000);
+    timer = setInterval(showNext, 6000);
 
     //移动端滑动事件
     var startX = 0;
@@ -73,7 +73,7 @@ $(function () {
         setTransition(true, true, true);
         setPosition(0)
       }
-      timer = setInterval(showNext, 8000);
+      timer = setInterval(showNext, 6000);
     });
 
 
@@ -142,46 +142,65 @@ $(function () {
   }
   function hotnews() {
     var hotnews = document.querySelector('nav ul'),
-        lis = hotnews.querySelectorAll('li');        
+      lis = hotnews.querySelectorAll('li');
     //获取li的高度,定时上移ul的margintop
-    liH = lis[0].offsetHeight
-    // console.log(lis[0].offsetHeight)
+    liH = 50 || lis[0].offsetHeight;
     //手动设置ul的高度
-    var ulH=0;
-    [].forEach.call(lis,function(v,i){
-      ulH+=liH
-    })
-    // console.log(ulH)
-
-    for(var i=0;i<2;i++){
+    for (var i = 0; i < 2; i++) {
       var li = lis[i].cloneNode(true)
       hotnews.appendChild(li)
-  }
-    var targetH =ulH
-        distance = 0,
-        pace = .5;
+    }
+    var ulH = 0;
+    [].forEach.call(lis, function (v, i) {
+      ulH += liH
+    })
+
+    var targetH = ulH
+    distance = 0,
+      pace = liH;
     setInterval(function () {
-      hotnews.style.marginTop = -(distance) + 'px'
+      hotnews.style.top = -(distance) + 'px'
       distance += pace
       if (distance > targetH) {
-        hotnews.style.marginTop = 0;
+        hotnews.style.top = 0;
         distance = 0
       }
-    }, 75)
+    }, 6000)
   }
   carouselMobile()
   hotnews()
 
   // 个人中心
-  $("#opencenter").on('click',function(){
+  $("#opencenter").on('click', function () {
     $('.modal').slideDown('normal')
     $('body').addClass('log')
+    $('html').addClass('log')
   })
 
-  $('.modal').on('click',function(e){
-    if(e.target.nodeName=="DIV"){
-      $('.modal').slideUp('normal')      
+  $('.modal').on('click', function (e) {
+    if (e.target.nodeName == "DIV") {
+      $('.modal').slideUp('normal')
       $('body').removeClass('log')
+      $('html').removeClass('log')
     }
   })
+
+  //首页搜索框的响应式
+  if ($(window).width() < 361) {
+    $('.header>.search>span').text('')
+  } else if ($(window).width() < 341) {
+    $('.header>.search>span').text('')
+  }
+
+  //判断是否到底部
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    var scrollHeight = $(document).height();
+    var windowHeight = $(this).height();
+    if (scrollTop + windowHeight > scrollHeight - 60) {
+      $('.footer').removeClass('common')
+    } else {
+      $('.footer').addClass('common')
+    }
+  });
 })

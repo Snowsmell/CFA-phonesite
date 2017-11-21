@@ -4,7 +4,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;  
+    .logobox{
+        flex: 0 0 120px;
+        order: -1;
+        img{
+            width: 100%;
+        }
+    }
     h1 {
+        flex: 0 0 65px;
         font-size: 24px;
         color: #4665ff;
         font-style: italic;
@@ -28,9 +36,9 @@
         i.iconfont {
             position: absolute;
             right: 10px;
-            font-size: 28px;
+            top: 2px;
+            font-size: 20px;
             color: #b7bbbf;
-            cursor: pointer;
         }
         >a{
             position: absolute;
@@ -43,35 +51,49 @@
     .login {
         align-content: flex-end;
         margin-left: 15px;
+        order: 5;
+        flex:0 0 28px;
         img {
-            width: 56px;
-            height: 56px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
         }
     }
 }
 
+.footer.common{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    bottom: 0;
+    z-index: 666;
+}
 .footer {
-    height: 70px;
+    height: 50px;
+    width: 100%;
+    max-width:750px;
     background: #fff;
     box-shadow: 5px 0 10px #ddd;
     display: flex;
     justify-content: space-around;
     color: #8c919b;
     >a {
+        width: 33%;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        font-size: 12px;
         i {
-            font-size: 24px;
+            font-size: 20px;
         }
         p {
             width: 100%;
         }
         &:nth-of-type(2) {
-            margin-left: 15px;
+            // margin-left: 15px;
         }
     }
 }
@@ -91,40 +113,29 @@
             width: 100%;
             font-size: 16px
         }
-        .login {
-            flex: 0 0 50px;
-        }
     }
 }
 
 @media(max-width:480px) {
     .header {
-        flex-wrap: wrap;
-        h1{margin-right: 0}
+        padding: 0 10px;
+        height: 60px;
+        .logobox{            
+        }
+        h1{
+            margin:0 5px;
+            padding-left: 5px;
+        }
         .login{
-          margin-left: 0;
+          margin-left: 5px;
         }
         .search {
-            flex: 0 0 100%;
             order: 5;
             width: 100%;
-            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+
         }
     }
 }
 
-@media(max-width:360px) {
-    .header {
-        flex-wrap: wrap;
-        h1{margin-left: 0}
-        .login{
-          margin-left: 0;
-        }
-        .search {
-            flex: 0 0 100%;
-            order: 5;
-            width: 100%;
-            margin-top: 10px;
-        }
-    }
-}

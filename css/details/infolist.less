@@ -90,8 +90,8 @@ header{
       font-size: 0;
       >li {
           display: inline-block;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           border: 1px solid #fff;
           border-radius: 50%;
           margin-right: 10px;
@@ -99,8 +99,8 @@ header{
       }
       >li.active {
           background-color: #fff;
-          width: 11px;
-          height: 11px;          
+          width: 9px;
+          height: 9px;          
       }
   }
 }
@@ -116,18 +116,17 @@ main{
       padding-bottom: 25px;
       border-bottom: 1px solid #ddd;
       .imgbox{        
-        flex:.35;
-        height: 140px;
+        flex:0 0 150px;
         img{
-          height: 140px;
+          height: 100px;
           max-width: 100%          
         }
       }
       .content{
         order: -1;
         position: relative;
-        flex:.63;
-        min-height: 140px;        
+        flex:1;
+        min-height: 100px;        
         h3{
           color:#333;
           font-size: 22px;
@@ -181,7 +180,7 @@ main{
       li{
         .content{
           h3{
-            font-size: 20px
+            font-size: 18px
           }
           .score{
             line-height: 20px;
@@ -201,8 +200,9 @@ main{
       li{
         .content{
           h3{
-            font-size: 18px;
+            font-size: 16px;
             text-shadow: .1px .1px #000; 
+            .spill(3)
           }
         }
       }
@@ -219,4 +219,27 @@ main{
       }
     }
   }
+  main{
+    padding: 15px 5px;
+    >ul{
+      li{
+        padding-bottom:15px;
+        margin-bottom: 15px; 
+        .imgbox{
+          flex: 0 0 120px;
+          img{
+            height: 80px;
+          }
+        }
+        .content{
+          min-height: 80px;
+          h3{
+            font-size: 14px;
+            text-shadow: .1px .1px #000; 
+            .spill(3)
+          }
+        }
+      }
+    }
+  }  
 }

@@ -1,26 +1,28 @@
 @import "../css/public/base.less";
 @import "../css/public/headerfooter.less";
+   
+html,body{  
+    height: 100%;    
+} 
  
-html,body{ 
-    height: 100%;
-}
-body.log{
-    overflow: hidden;
+body.log,
+html.log{ 
+    overflow-y: hidden;
 }  
-  
+    
 body {
-    background-color: #f2f3f3;
+    background-color: #f2f3f3;  
     max-width: 750px;
     min-width: 320px;
     margin: 0 auto;
-} 
-//banner 
+}      
+//banner   
 .carousel.banner {
     width: 100%;
     min-width: 320px;
     margin: 0 auto;
     position: relative;
-    min-height: 143px;
+    min-height: 143px; 
     overflow: hidden;
     >ul {
         width: 100%;
@@ -32,12 +34,12 @@ body {
             left: 0;
             top: 0;
             transform: translateX(100%);
-            a {
+            a { 
                 display: block;
                 img {
                     max-width: 100%;
                     min-height: 160px;
-                }
+                } 
             }
         }
     }
@@ -62,32 +64,44 @@ body {
         }
     }
 } 
- 
+   
 nav {  
     margin: 15px 0;
-    padding: 10px 20px;
-    display: flex;
-    flex: 1;
+    padding:0 20px;
     background-color: #fff;
-    height: 75px;
+    height: 50px;
     overflow: hidden;
     i.iconfont {
-        font-size: 48px;
+        font-size: 36px;
         color: #5662ff;
-        padding-right: 15px;
-        border-right: 1px solid #dbdee1;
-        flex: 0 0 50px;
-        align-self: center;
+        padding-right: 15px;        
+        float: left;
+        width: 50px;
+        text-align: center;
+        position: relative;
+        line-height: 60px;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 35px;
+            right: 0;
+            top: 7.5px;
+            background-color: #ddd;
+        }
     }
     ul {
         flex: 1;
         overflow: hidden;
+        transition: all .3s;
+        position: relative;
         li {
-            padding: 0 20px 0 30px;
+            padding: 0 20px 0 30px;            
             position: relative;
-            font-size: 26px;
+            line-height: 50px;
+            height: 50px;
+            font-size: 14px;
             color: #666;
-            line-height: 55px;
             .clip();
             &:before,
             &:after {
@@ -115,33 +129,41 @@ nav {
  
 main {
     h2 {
-        font-size: 28px;
+        font-size: 20px;
         position: relative;
         font-weight: 100;
-        height: 60px;
-        line-height: 60px;
+        height: 30px;
+        line-height: 30px;
         overflow: hidden;
         span {
             position: absolute;
             left: 0;
             height: 100%;
-            padding: 0 30px;
+            padding: 0 10px;
             color: #fff;
+            i{
+                position: relative;
+                z-index: 555;
+                font-size: 16px;
+                font-weight: 600;
+            }
             &:after {
                 content: "";
                 position: absolute;
                 width: 40px;
                 height: 120%;
-                right: -20px;
-                top: -10px;
+                right: -8px;
+                top: -8px;
                 transform: rotate(20deg)
             }
         }
         a {
             position: absolute;
-            right: 20px;
+            top:4px;
+            right: 16px;
             color: #999;
-            font-size: 18px;
+            font-size: 14px;
+            text-shadow: .1px .1px #999;
             font-family: "宋体"
         }
     }
@@ -227,19 +249,19 @@ main {
                 position: relative;
                 .content {
                     flex: 1;
-                    height: 140px;
-                    position: relative;
+                    height: 100px;    
+                    position: relative;                
                     h3 {
-                        font-size: 26px;
+                        font-size: 22px;
                         line-height: 40px;
                         font-weight: 400;
                         text-align: justify;
                         padding-right: 10px;
-                        .spill(3);
-                    }
+                        .spill(2);
+                    } 
                     p {
                         position: absolute;
-                        bottom: 0;
+                        bottom: -5px;
                         color:#999;
                         span:first-of-type {
                             padding-right: 20px;
@@ -250,9 +272,10 @@ main {
                 }
                 .imgbox {
                     flex: 0 0 210px;
+                    padding-top: 5px;
                     img {
                         max-width: 100%;
-                        height: 140px;
+                        // height: 140px;
                     }
                 }
                 >a {
@@ -269,28 +292,27 @@ main {
     .listenCenter,
     .course {
         ul {
-            padding: 35px 40px;
+            padding: 20px 20px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             li {
-                width: 48%;
-                margin-bottom: 30px;
+                width: 48%;                
                 box-shadow: 0 0 20px #ddd;
                 .top {
                     position: relative;
                     img {
                         width: 100%;
-                        height: 120px;
                     }
                     h3 {
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
                         left: 0;
-                        padding: 0 25px;
+                        width: 100%;
+                        text-align: center;
                         color: #fff;
-                        font-size: 24px;
+                        font-size: 14px;
                         font-weight: 400;
                     }
                 }
@@ -306,17 +328,21 @@ main {
                     }
                     span {
                         color: #999;
+                        font-size: 14px;
                     }
                     a {
                         display: block;
                         color: #fefefe;
                         text-align: center;
-                        font-size: 24px;
-                        height: 45px;
-                        line-height: 45px;
+                        font-size: 14px;
+                        height: 24px;
+                        line-height: 24px;
                         background-color: #21cc85;
                         margin-top: 8px;
                     }
+                }
+                &:nth-of-type(-n+2){
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -338,33 +364,34 @@ main {
                     position: relative;
                     .imgbox {
                         margin: 0 auto;
-                        width: 140px;
-                        height: 140px;
+                        width: 110px;
+                        height: 110px;
                         border: 1px solid #ddd;
                         border-radius: 50%;
                         img {
-                            width: 120px;
-                            height: 120px;
+                            width: 90px;
+                            height: 90px;
                             margin-top: 10px
                         }
                     }
                     p {
                         margin: 10px 0;
                         &:nth-of-type(1) {
-                            font-size: 26px;
+                            font-size: 20px;
                             color: #333;
                         }
                         &:nth-of-type(2) {
-                            font-size: 18px;
+                            padding: 0 8px;
+                            font-size: 12px;
                             color: #666;
-                            line-height: 24px;
-                            height: 72px;
-                            .spill(3);
+                            line-height: 20px;
+                            height: 40px;
+                            .spill(2);
                         }
                     }
                     span {
                         color: #999;
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
                 &:nth-of-type(2n+1) {
@@ -372,10 +399,10 @@ main {
                         &:before {
                             content: "";
                             position: absolute;
-                            height: 100%;
+                            height: 90%;
                             width: 1px;
                             background-color: #ddd;
-                            top: 0;
+                            top: 5%;
                             right: -30px;
                         }
                     }
@@ -386,9 +413,9 @@ main {
                             content: "";
                             position: absolute;
                             height:1px;
-                            width: 100%;
+                            width: 90%;
                             background-color: #ddd;
-                            left: 0;
+                            left: 5%;
                             bottom: -30px;
                         }                        
                     }
@@ -398,7 +425,7 @@ main {
     }
     .share{
         ul{
-            padding-bottom: 50px;
+            padding-bottom: 10px;
             li{
                 text-align: center;
                 margin: 10px 0;
@@ -414,7 +441,6 @@ main {
     }
     .agencies{
         margin-bottom: 0;
-        padding-bottom: 30px;
         ul{
             padding: 30px;
             display: flex;
@@ -431,37 +457,37 @@ main {
                 padding: 0 5px;              
                 img{
                     max-width: 100%;
-                }
+                }                
             }
         }
-    }
+    } 
     .getdata{
         background: url("../images/getdata-bg_22.jpg");
         background-position-x: -50px;
         background-position-y: -50px;
         margin: 0;
-        padding: 60px 0 40px;
-        h2{
+        padding: 20px 0 ;
+        h2{ 
             color:#333;
             text-align: center;
-            font-size: 28px;
+            font-size: 18px;
             font-weight: 400;
-        }
-        form{
-            max-width: 600px;
+        } 
+        form{ 
+            max-width: 640px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            input{
+            input{ 
                 border: none;
                 background-color: #fff;
-                width: 80%;
-                line-height: 40px;
-                height: 40px;
-                font-size: 24px;
+                width: 90%;
+                line-height: 35px;
+                height: 35px;
+                font-size: 14px;
                 color:#333;
-                margin: 12px;
+                margin: 5px 0;
                 padding-left: 25px;
                 box-shadow: 0 5px 10px #ddd;
                 outline: none;
@@ -469,7 +495,7 @@ main {
             input[type='submit']{
                 background-color: #4f64ff;
                 color:#fff;
-                font-size:26px; 
+                font-size:20px; 
                 line-height: 32px;
                 padding: 0;
             }
@@ -489,21 +515,21 @@ main {
     background-color: rgba(0,0,0,.6);
     z-index: 999;
     .box{
-        min-height: 280px;
+        min-height: 220px;
         background-color: #fff;   
         box-shadow: 5px 0 10px #ddd;
         text-align: center;        
         .links{
-            padding: 30px 0;
+            padding: 15px 0;
             display: flex;
             justify-content: space-around;
             border-bottom: 1px solid #ddd;
             a{
                 width: 30%;
-                font-size: 20px;
+                font-size: 16px;
                 img{
-                    width: 60px;
-                    height: 60px;
+                    width: 40px;
+                    height: 40px;
                 }
             }
         } 
@@ -513,11 +539,11 @@ main {
             max-width: 380px;
             background-color: #4a64ff;
             color:#fff;
-            height: 45px;
-            line-height: 45px;
-            font-size: 20px;  
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;  
             border-radius: 22.5px;
-            margin-top: 30px;
+            margin-top: 15px;
         }
         >a.logout{
             background-color: #d1d4e1
@@ -536,9 +562,9 @@ main {
                     .content {
                         h3 {
                             font-size: 16px;
-                            line-height: 26px;
+                            line-height: 24px;
                             font-weight: 400;
-                            .spill(4);
+                            .spill(2);
                         }
                     }
                     .imgbox {
@@ -550,19 +576,20 @@ main {
         .listenCenter,
         .course {
             ul {
-                padding: 30px 10px;
+                padding: 15px;
                 li {
                     .top {
                         h3 {
-                            font-size: 20px;
+                            font-size: 16px;
                         }
                     }
                     >div:nth-of-type(2) {
                         padding: 15px;
                         p {
-                            font-size: 16px;
-                            line-height: 28px;
-                            height: 84px;
+                            font-size: 14px;
+                            line-height: 20px;
+                            height: 60px;
+                            text-align: justify;
                             .spill(3);
                             margin-bottom: 10px;
                         }
@@ -574,24 +601,16 @@ main {
             ul {
                 padding: 15px;
                 li {
-                    padding: 20px;
+                    padding: 20px 0 0 0;
                     div {
-                        p {
-                            &:nth-of-type(1) {
-                                font-size: 24px;
-                            }
-                            &:nth-of-type(2) {
-                                font-size: 16px;
-                            }
-                        }
                         span {
-                            font-size: 18px;
+                            font-size: 14px;
                         }
                     }
                     &:nth-of-type(2n+1) {
                         >div {                        
                             &:before {
-                                right: -22px;
+                                right: 0px;
                             }
                         }
                     }
@@ -601,10 +620,14 @@ main {
                                 bottom: -20px;
                             }                        
                         }
+                        padding: 20px 0;
                     }
                 }
             }
         }        
+    }
+    .modal{
+        top: 60px;
     }
 }
 
@@ -612,19 +635,27 @@ main {
 
     nav {
         margin: 10px 0;
-        ul {
-            li {
-                line-height: 30px;
-                font-size: 16px;
-            }
-        }
+        // ul {
+        //     li {
+        //         line-height: 30px;
+        //         font-size: 16px;
+        //     }
+        // }
     }
     main {
         .testinfo {
             ul {
                 padding: 0 10px 10px;
                 li {
-                    padding: 15px 0;
+                    padding: 10px 0;                    
+                    .content{
+                        h3{
+                            font-size: 14px;      
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
                     .imgbox {
                         flex: 0 0 150px;
                     }
@@ -635,7 +666,8 @@ main {
             ul{
                 li{
                     div{
-                        span{font-size: 14px}
+                        span{font-size: 12px}
+
                     }
                 }
             }
@@ -645,7 +677,7 @@ main {
                 padding: 20px 15px;
             }
         }
-    }
+    } 
 }
 
 @media(max-width:360px) {
@@ -653,88 +685,46 @@ main {
         margin: 5px 0;
         ul {
             li {
-                line-height: 30px;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
     main{
-        .testinfo {
-            ul {
-                padding: 0 10px 10px;
-                li {
-                    padding: 15px 0;
-                    .imgbox {
-                        flex: 0 0 120px;
-                    }
-                }
-            }
-        }  
-        .listenCenter,
-        .course {
-            ul {
-                padding: 15px;
-                justify-content: center;
-                li {
-                    width: 95%;
-                    .top {
-                        h3 {
-                            font-size: 24px;
-                        }
-                    }
-                    >div:nth-of-type(2) {
-                        padding: 15px;
-                        p {
-                            font-size: 18px;
-                            line-height: 28px;
-                            height: 84px;
-                            .spill(3);
-                            margin-bottom: 10px;
-                        }
-                    }
-                }
-            }
-        }
         .teachers {
             ul {
-                padding: 10px;
-                justify-content: center;                
                 li {
-                    width: 93%;
-                    box-shadow: 0 0 10px #ddd;
-                    padding: 5px 10px ;
-                    margin: 10px 0;
+                    padding: 10px 0 0 0;
                     div {
-                        p {
-                            &:nth-of-type(1) {
-                                font-size: 26px;
-                            }
-                            &:nth-of-type(2) {
-                                font-size: 18px;
-                                height: inherit;
-                                .spill(6);
+                        .imgbox {
+                            width: 90px;
+                            height: 90px;
+                            img {
+                                width: 75px;
+                                height: 75px;
+                                margin-top: 6px;
                             }
                         }
                         span {
-                            font-size: 20px;
+                            font-size: 14px;
                         }
                     }
                     &:nth-of-type(2n+1) {
                         >div {                        
                             &:before {
-                               display: none;
+                                right: 0px;
                             }
                         }
                     }
                     &:nth-of-type(-n+2){
                         >div{
                             &:after {
-                                display: none;
+                                bottom: -15px;
                             }                        
                         }
+                        padding: 10px 0;
                     }
                 }
             }
-        }           
+        }  
     }
 }

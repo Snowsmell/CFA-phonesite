@@ -285,14 +285,12 @@ main ul li {
   justify-content: space-between;
 }
 main ul li .imgbox {
-  flex: .35;
-  height: 140px;
+  flex: 0 0 150px;
   position: relative;
 }
 main ul li .imgbox img {
-  height: 140px;
-  width: 100%;
-  max-width: 210px;
+  height: 100px;
+  max-width: 100%;
 }
 main ul li .imgbox > div {
   position: absolute;
@@ -313,7 +311,7 @@ main ul li .imgbox > div .progress {
 main ul li .imgbox > div .progress > div {
   margin-top: 5px;
   width: 100%;
-  height: 12px;
+  height: 10px;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.6);
   position: relative;
@@ -322,19 +320,19 @@ main ul li .imgbox > div .progress > div span {
   position: absolute;
   left: 0;
   top: 0;
-  height: 12px;
+  height: 10px;
   border-radius: 6px;
   background-color: #fff;
 }
 main ul li .content {
   position: relative;
   padding-left: 5px;
-  flex: .63;
-  min-height: 140px;
+  flex: 1;
+  min-height: 100px;
 }
 main ul li .content h3 {
   color: #333;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
@@ -344,12 +342,12 @@ main ul li .content h3 {
 }
 main ul li .content p {
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
   margin: 15px 0;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 main ul li .content .operate {
@@ -358,6 +356,7 @@ main ul li .content .operate {
   overflow: hidden;
   width: 100%;
   padding-right: 15px;
+  font-size: 12px;
 }
 main ul li .content .operate > a {
   float: left;
@@ -370,20 +369,8 @@ main ul li .content .operate > a {
 }
 main ul li .content .operate span.delete {
   float: right;
-  width: 26px;
-  height: 26px;
-  background-image: url('../../images/rubbish.png');
-}
-@media (max-width: 480px) {
-  main {
-    padding: 25px 20px;
-  }
-  main ul li .content h3 {
-    font-size: 18px;
-  }
-  main ul li .content p {
-    font-size: 16px;
-  }
+  line-height: 27px;
+  margin-right: 5px;
 }
 @media (max-width: 375px) {
   header {
@@ -392,21 +379,33 @@ main ul li .content .operate span.delete {
   main {
     padding: 25px 5px;
   }
-  main ul li .content h3 {
-    font-size: 16px;
-    text-shadow: .1px .1px #000;
-  }
   main ul li .content p {
+    margin: 8px 0;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    padding: 0 5px;
+  }
+  main ul li .imgbox {
+    flex: 0 0 120px;
+  }
+  main ul li .imgbox img {
+    height: 80px;
+  }
+  main ul li .content {
+    min-height: 80px;
+  }
+  main ul li .content h3 {
     font-size: 14px;
     overflow: hidden;
     display: -webkit-box;
     word-break: break-all;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    margin: 8px 0;
   }
-  main ul li .content .operate {
-    line-height: 20px;
+  main ul li .content p {
+    font-size: 12px;
   }
 }
 .deletemodal {
@@ -429,8 +428,8 @@ main ul li .content .operate span.delete {
   -webkit-transform: translate(-50%, -50%);
 }
 .deletemodal .box p {
-  padding: 40px 0;
-  font-size: 20px;
+  padding: 20px 0;
+  font-size: 18px;
   text-align: center;
 }
 .deletemodal .box .btns {
@@ -442,7 +441,7 @@ main ul li .content .operate span.delete {
   font-size: 16px;
   text-align: center;
   color: #4665ff;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .deletemodal .box .btns span:first-of-type {
   border-right: 1px solid #eee;

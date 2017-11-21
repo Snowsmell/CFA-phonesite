@@ -47,7 +47,7 @@ video {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: arial, "PingFang SC", "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
 }
 a {
   text-decoration: none;
@@ -258,7 +258,7 @@ body {
   height: 100%;
 }
 header {
-  height: 70px;
+  height: 50px;
   padding: 0 20px;
   box-shadow: 0 5px 5px #ddd;
   display: flex;
@@ -273,8 +273,8 @@ header label {
 }
 header label input {
   width: 100%;
-  height: 45px;
-  line-height: 45px;
+  height: 35px;
+  line-height: 35px;
   outline: none;
   padding-left: 20px;
   border: 1px solid #ddd;
@@ -287,17 +287,17 @@ header label i.iconfont {
   transform: translateY(-50%);
 }
 header a {
-  font-size: 18px;
+  font-size: 16px;
   flex: 0 0 50px;
   color: #000;
 }
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 20px 20px 0 ;
+  padding: 15px 20px 0;
 }
 nav > a {
-  font-size: 20px;
+  font-size: 16px;
   padding: 0 0 10px 0;
   color: #333;
   text-shadow: .1px .1px #333;
@@ -309,34 +309,40 @@ nav a.current {
 }
 main p.numbers {
   background-color: #f3f5f7;
-  padding: 16px;
+  padding: 10px 16px;
   color: #666;
 }
 main > div ul {
-  padding: 25px 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 0 20px;
+}
+main > div ul p {
+  margin-bottom: 10px;
 }
 main > div ul li {
   display: flex;
   flex: 1;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 main > div ul li .imgbox {
-  flex: .3;
-  height: 140px;
+  flex: 0 0 150px;
+  height: 100px;
 }
 main > div ul li .imgbox img {
-  height: 140px;
+  height: 100px;
   max-width: 100%;
 }
 main > div ul li .content {
   position: relative;
-  flex: .68;
-  min-height: 140px;
+  flex: 1;
+  padding-left: 5px;
+  min-height: 100px;
 }
 main > div ul li .content h3 {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
@@ -346,8 +352,8 @@ main > div ul li .content h3 {
 }
 main > div ul li .content p {
   color: #666;
-  font-size: 16px;
-  margin: 15px 0;
+  font-size: 14px;
+  margin: 10px 0;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -361,8 +367,8 @@ main > div ul li .content .score {
 main > div ul li .content .score img,
 main > div ul li .content .score span {
   vertical-align: middle;
-  height: 18px;
-  line-height: 18px;
+  height: 15px;
+  line-height: 15px;
 }
 main > div ul li .content .score img {
   margin-top: -2px;
@@ -382,68 +388,87 @@ main > div ul li .content > a {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 90;
   width: 100%;
   height: 100%;
+}
+main > div ul li:last-of-type {
+  margin-bottom: 0;
 }
 main .aboutInfo {
   display: none;
 }
 main .aboutInfo ul li {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #ddd;
 }
 main .aboutInfo ul li .content {
   order: -1;
 }
 main .aboutInfo ul li .content h3 {
-  font-size: 20px;
+  font-size: 16px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 @media (max-width: 480px) {
-  main > div ul {
-    padding: 25px 5px;
+  main > div > ul {
+    padding: 15px 20px;
   }
-  main > div ul li .content h3 {
-    font-size: 18px;
-  }
-  main > div ul li .content p {
-    font-size: 16px;
-  }
-  main > div ul li .content .score {
-    line-height: 20px;
+  main > div > ul li .content .score {
+    line-height: 15px;
     font-size: 12px;
   }
-  main > div ul li .content .score span:nth-of-type(2) {
+  main > div > ul li .content .score span:nth-of-type(2) {
+    padding-left: 5px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 375px) {
+  main > div > ul li .content h3 {
+    font-size: 16px;
+  }
+  main > div > ul li .content p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  main > div > ul li .content .score img {
+    width: 40%;
+    height: 10px;
+  }
+  main > div > ul li .content .score span:nth-of-type(2) {
     padding-left: 0;
     margin-left: 0;
     border-left: none;
   }
 }
-@media (max-width: 375px) {
-  main > div ul li .content h3 {
-    font-size: 16px;
-    text-shadow: .1px .1px #000;
+@media (max-width: 360px) {
+  main > div > ul {
+    padding: 15px 5px;
   }
-  main > div ul li .content p {
+  main > div > ul li .imgbox {
+    flex: 0 0 120px;
+    height: 80px;
+  }
+  main > div > ul li .imgbox img {
+    height: 80px;
+  }
+  main > div > ul li .content {
+    min-height: 80px;
+  }
+  main > div > ul li .content h3 {
     font-size: 14px;
-    overflow: hidden;
-    display: -webkit-box;
-    word-break: break-all;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  }
+  main > div > ul li .content p {
+    font-size: 12px;
     margin: 8px 0;
   }
-  main > div ul li .content .score {
-    line-height: 20px;
+  main > div > ul li .content .score img {
+    width: 40%;
+    height: 10px;
   }
-  main > div ul li .content .score span:nth-of-type(2) {
-    padding-left: 0;
-    margin-left: 0;
-    border-left: none;
+  main > div > ul li .content .score span:nth-of-type(2) {
+    padding-left: 10px;
   }
 }
