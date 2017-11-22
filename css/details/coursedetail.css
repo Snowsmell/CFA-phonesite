@@ -459,6 +459,8 @@ nav {
   background-color: #fff;
 }
 nav span {
+  width: 30%;
+  text-align: center;
   padding-bottom: 15px;
   border-bottom: 1px solid transparent;
 }
@@ -556,7 +558,7 @@ main .detail ul li .content .score span {
 }
 main .detail ul li .content .score img {
   margin-top: -2px;
-  width: 50%;
+  width: 40%;
   max-width: 140px;
 }
 main .detail ul li .content .score span {
@@ -743,6 +745,9 @@ main > button {
   }
 }
 @media (max-width: 360px) {
+  main .detail > ul {
+    padding: 15px 5px;
+  }
   main .detail > ul li .imgbox {
     flex: 0 0 120px;
     height: 80px;
@@ -758,14 +763,14 @@ main > button {
   }
   main .detail > ul li .content p {
     font-size: 12px;
-    margin: 8px 0;
+    margin: 3px 0;
   }
   main .detail > ul li .content .score img {
     width: 40%;
     height: 10px;
   }
   main .detail > ul li .content .score span:nth-of-type(2) {
-    padding-left: 10px;
+    padding-left: 0px;
   }
 }
 .sharemodal {

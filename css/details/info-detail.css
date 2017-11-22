@@ -447,7 +447,7 @@ main {
 }
 main nav {
   background-color: #fff;
-  padding: 5px 20px;
+  padding: 8px 20px;
   border-bottom: 1px solid #ddd;
 }
 main nav a {
@@ -557,7 +557,7 @@ main > ul li .content .score span {
 }
 main > ul li .content .score img {
   margin-top: -2px;
-  width: 50%;
+  width: 40%;
   max-width: 140px;
 }
 main > ul li .content .score span {

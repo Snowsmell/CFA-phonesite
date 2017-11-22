@@ -445,7 +445,7 @@ main article h2 {
 }
 main article h2 span {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
   margin-left: 5px;
   padding-left: 5px;
@@ -564,6 +564,10 @@ main ul li:last-of-type {
   main > ul li .content .score {
     line-height: 15px;
     font-size: 12px;
+  }
+  main > ul li .content .score img {
+    width: 40%;
+    height: 10px;
   }
   main > ul li .content .score span:nth-of-type(2) {
     padding-left: 5px;
