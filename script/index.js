@@ -9,7 +9,6 @@ $(function () {
     var timer2 = null;
     var imgWidth = lis[0].offsetWidth;
     var imgHeight = lis[0].offsetHeight;
-    console.log(imgWidth);
 
     function setHeight() {
       //设置盒子高度
@@ -29,7 +28,6 @@ $(function () {
       timer2 = setTimeout(function () {
         ol.innerHTML = '';
         setHeight();
-        // window.location.reload();
       }, 500)
     })
 
@@ -38,7 +36,6 @@ $(function () {
     var left = lis.length - 1;
     var center = 0;
     var right = 1;
-    console.log(left)
     lis[left].style.transform = "translateX(" + (-imgWidth) + "px)";
     lis[center].style.transform = "translateX(0px)";
     lis[right].style.transform = "translateX(" + (imgWidth) + "px)";
